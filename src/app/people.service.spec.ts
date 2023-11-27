@@ -6,6 +6,7 @@ import { ValueService } from './value.service';
 
 describe('PeopleService', () => {
   let service: PeopleService;
+  let value: ValueService;
   const valueSpy = {
     getValue: jest.fn()
   }
@@ -15,6 +16,7 @@ describe('PeopleService', () => {
       providers: [PeopleService, { provide: ValueService, useValue: valueSpy }]
     });
     service = TestBed.inject(PeopleService);
+    value = TestBed.inject(ValueService);
   });
 
   it('should be created', () => {
