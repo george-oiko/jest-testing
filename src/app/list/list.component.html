@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<button (click)="refresh()">Refresh</button>
+<ul>
+    <li *ngFor="let item of list">
+        <span>{{item.description}}</span>
+        <button (click)="itemClick(item)">Edit</button>
+    </li>
+</ul>
