@@ -37,7 +37,7 @@ describe('CarComponent', () => {
     expect(name?.textContent).toEqual('name is VW');
   });
   
-  it('name is displayed correctly', () => {
+  it('After the button is clicked the car name is returned correctly', () => {
     const edit = testHostFixture.nativeElement.querySelector('.edit');
     edit.click();
     expect(component.editedCar).toEqual('VW');
