@@ -1,9 +1,11 @@
-<p>We are in business</p>
+<h1>We are in business</h1>
 <title>{{description}}</title>
 <pre>{{message}}</pre>
 <section *ngIf="!loading && message.length > 0">
     <ul>
-        <li *ngFor="let item of "></li>
+        <li *ngFor="let item of list">
+            <app-presentational [item]="item" (clicked)="edit($event)"></app-presentational>
+        </li>
     </ul>
 
 </section>
