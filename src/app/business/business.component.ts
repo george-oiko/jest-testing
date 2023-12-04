@@ -35,8 +35,8 @@ export class BusinessComponent {
     }
   }
 
-  edit(id: number) {
-    this.logic.edit(id);
+  edit(full: string) {
+    this.logic.edit(full);
     this.list = this.logic.getList().map(i => {
       return {
         full: i.id + i.name,

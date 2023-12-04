@@ -25,12 +25,7 @@ export class LogicService {
     return this.list;
   }
 
-  edit(id: number) {
-    this.list = this.list.map(i => {
-      if (i.id === id) {
-        return { ...i, edited: true }
-      }
-      return i;
-    })
+  edit(full: string) {
+    console.log(full);
   }
 }
